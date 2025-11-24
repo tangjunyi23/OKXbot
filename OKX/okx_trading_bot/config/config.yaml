@@ -1,0 +1,59 @@
+advanced_strategy:
+  base_stop_loss: 0.025
+  position_size: 5000000
+  use_funding_rate: true
+  use_multi_timeframe: true
+  use_orderbook: true
+  use_volume_confirm: true
+backtest:
+  commission_rate: 0.0005
+  end_date: '2024-12-31'
+  initial_capital: 10000
+  start_date: '2024-01-01'
+grid_strategy:
+  grid_num: 10
+  investment: 15
+  min_profit_rate: 0.005
+  price_lower: 0.138
+  price_upper: 0.15
+notification:
+  enabled: true
+  log_file: trading_bot.log
+  log_level: INFO
+okx:
+  api_key: YOUR_API_KEY
+  base_url: https://www.okx.com
+  is_simulated: false
+  passphrase: YOUR_PASSPHRASE
+  proxy: http://127.0.0.1:7897
+  secret_key: YOUR_SECRET_KEY
+position_strategy:
+  ma_long_period: 15
+  ma_short_period: 5
+  position_size: 0.1
+  stop_loss_rate: 0.02
+  take_profit_rate: 0.045
+risk_management:
+  max_daily_loss: 500
+  max_drawdown: 0.2
+  max_position_size: 0.1
+  stop_loss_rate: 0.05
+  take_profit_rate: 0.1
+smart_strategy:
+  base_stop_loss: 0.025
+  base_take_profit: 0.05
+  ma_long_period: 15
+  ma_short_period: 5
+  min_signal_strength: 50
+  position_size: 5000000
+  rsi_period: 14
+  time_filter_enabled: false
+  trailing_stop_distance: 0.012
+  trailing_stop_trigger: 0.025
+  volatility_window: 20
+trading:
+  leverage: 10
+  margin_mode: cross
+  position_side: net
+  strategy_type: smart
+  symbol: GPS-USDT-SWAP

@@ -1,0 +1,51 @@
+# OKX API 配置
+okx:
+  api_key: "feacca29-2097-4256-885c-33258b912860"
+  secret_key: "FBA3FD3CC91453F3183EA6BD601CA0B2"
+  passphrase: "Tang+6831097"
+  is_simulated: false  # true=模拟盘, false=实盘
+  base_url: "https://www.okx.com"
+  proxy: null  # 代理设置，如不需要请设为 null
+
+# 交易配置 - 平衡策略
+trading:
+  strategy_type: "position"  # position=做多做空策略, grid=网格策略
+  symbol: "ETH-USDT-SWAP"  # 交易对
+  margin_mode: "cross"  # cross=全仓, isolated=逐仓
+  leverage: 50  # 50倍杠杆 (中等风险)
+  position_side: "net"  # net=单向持仓
+
+# 做多做空仓位策略配置 - 平衡版
+position_strategy:
+  position_size: 0.01  # 每次开仓0.1张 (约0.01 ETH)
+  stop_loss_rate: 0.02  # 2%止损
+  take_profit_rate: 0.045  # 4.5%止盈
+  ma_short_period: 5  # 短期均线周期
+  ma_long_period: 15  # 长期均线周期
+
+  # 风险管理
+  max_daily_trades: 15  # 每日最大交易次数
+  max_daily_loss_count: 5  # 每日最大亏损次数
+  max_consecutive_losses: 5  # 最大连续亏损次数
+
+# 风险管理配置
+risk_management:
+  max_position_size: 0.1  # 最大仓位
+  stop_loss_rate: 0.02  # 止损比例 (2%)
+  take_profit_rate: 0.045  # 止盈比例 (4.5%)
+  max_daily_loss: 2.5  # 每日最大亏损 (USDT)
+  max_drawdown: 0.25  # 最大回撤 (25%)
+  min_balance: 10.0  # 最小余额
+
+# 回测配置
+backtest:
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+  initial_capital: 17  # 初始资金 (USDT)
+  commission_rate: 0.0005  # 手续费率 (0.05%)
+
+# 通知配置
+notification:
+  enabled: true
+  log_level: "INFO"
+  log_file: "trading_bot_balanced.log"
