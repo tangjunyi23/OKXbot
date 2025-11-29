@@ -1,8 +1,8 @@
 # OKX API 配置
 okx:
-  api_key: "feacca29-2097-4256-885c-33258b912860"
-  secret_key: "FBA3FD3CC91453F3183EA6BD601CA0B2"
-  passphrase: "Tang+6831097"
+  api_key: "xxxxxxxxxxx"
+  secret_key: "xxxxxxxxxx"
+  passphrase: "xxxxxxxxxxxxxxxxx"
   is_simulated: false  # true=模拟盘, false=实盘
   base_url: "https://www.okx.com"
   proxy: null  # 代理设置，如不需要请设为 null
